@@ -26,7 +26,7 @@ jobs:
     - name: Set Secrets and Change Dir
       run: | # Secrets needed on the server
         echo "SECRET=${{secrets.SECRET}}" >> .env.production
-        echo "NEXT_PUBLIC_SUPABASE_ANON_KEY=${{secrets.NEXT_PUBLIC_SUPABASE_ANON_KEY}}" >> .env.production
-        echo "NEXT_PUBLIC_SUPABASE_URL=${{secrets.NEXT_PUBLIC_SUPABASE_URL}}" >> .env.production
+        echo "NEXT_PUBLIC_SUPABASE_ANON_KEY=${{secrets.NEXT_PUBLIC_SUPABASE_ANON_KEY}}" >> .env.local
+        echo "NEXT_PUBLIC_SUPABASE_URL=${{secrets.NEXT_PUBLIC_SUPABASE_URL}}" >> .env.local
         cd /home/mumumu/actions-runner/_work/production/production
     - run: pm2 restart 1
