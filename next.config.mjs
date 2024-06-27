@@ -1,7 +1,5 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  output: "export",
-  basePath: "/easy-sell-nextjs",
   images: {
     remotePatterns: [
       {
@@ -13,6 +11,10 @@ const nextConfig = {
         hostname: 'jlzvktrtmclopylirnmh.supabase.co',
       },
     ],
+  },
+  env: {
+    NEXT_PUBLIC_SUPABASE_URL: process.env.NEXT_PUBLIC_SUPABASE_URL,
+    NEXT_PUBLIC_SUPABASE_ANON_KEY: process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY,
   },
 };
 
