@@ -1,11 +1,9 @@
 import { createClient } from '@/superbase/client';
-import { getImageUrl } from '@/utils';
+import { getImageUrl, supabase } from '@/utils';
 import { Metadata } from 'next';
 import Image from 'next/image';
 import { notFound } from 'next/navigation';
 import React from 'react'
-
-const supabase = createClient();
 
 export async function generateMetadata(
   { params }: { params: { slug: string } },
@@ -31,7 +29,6 @@ export async function generateMetadata(
 }
 
 export async function generateStaticParams() {
-    const supabase = createClient();
     const {data: products, error} = await supabase.from("easysell-products")
     .select();
 

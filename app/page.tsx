@@ -1,11 +1,11 @@
 import { createClient } from "@/superbase/client";
 import Card from "@/components/card";
 import Image from "next/image";
+import { supabase } from "@/utils";
 
 export const revalidate = 3600;
 
 export default async function Home() {
-  const supabase = createClient();
 
   const {data: products, error} = await supabase.from("easysell-products")
   .select();
