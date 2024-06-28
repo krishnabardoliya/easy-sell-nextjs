@@ -1,6 +1,6 @@
 'use server';
 import { z } from 'zod';
-import { createServerClient } from '@supabase/ssr'
+import { createServerActionClient } from '@supabase/auth-helpers-nextjs';
 import { cookies } from 'next/headers'
 import { revalidatePath } from 'next/cache';
 import { redirect } from 'next/navigation';
@@ -49,19 +49,8 @@ export async function sellYourItemAction(prevState: any, formData: FormData) {
         const { name, description, price, imageUrl, contactEmail } =
             validatedFields.data;
 
-        const cookieStore = cookies()
 
-        const supabase = createServerClient(
-            process.env.NEXT_PUBLIC_SUPABASE_URL!,
-            process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!,
-            {
-                cookies: {
-                    getAll() {
-                        return cookieStore.getAll()
-                    },
-                },
-            }
-        )
+            const supabase = createServerActionClient({ cookies });
         const fileName = `${Math.random()}-${imageUrl.name}`;
         const { data, error } = await supabase.storage.from('easy-sell-product-images').upload(fileName, imageUrl, {
             cacheControl: '3600',
