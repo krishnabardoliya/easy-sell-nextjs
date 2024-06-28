@@ -11,7 +11,7 @@ const config: Config = {
       content: ["./app/pages/**/*.{ts,tsx}",
       "./app/components/**/*.{ts,tsx}",
       "./src/**/*.{ts,tsx}",
-      "./data/**/*.{ts,tsx}",],
+      "./data/**/*.{ts,tsx}"],
     }
   ,
   theme: {
