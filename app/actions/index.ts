@@ -64,7 +64,7 @@ export async function sellYourItemAction(prevState: any, formData: FormData) {
             }
         }
 
-        const { insertError } = await supabase.from("easysell-products")
+        const { error: insertError } = await supabase.from("easysell-products")
             .insert({...validatedFields.data,imageUrl: data.path} )
 
             if(insertError) {
