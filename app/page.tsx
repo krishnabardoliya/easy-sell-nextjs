@@ -24,7 +24,7 @@ export default async function Home() {
             <p className="text-xl">You can pay to boost your products here.</p>
           </div>
           <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-2 xl:gap-12">
-          {topProduct.map((item:any, idx: number) => (
+          {topProduct && topProduct.map((item:any, idx: number) => (
               <Card key={`${item.name}-${idx}`} {...item} />
             ))}
           </div>
