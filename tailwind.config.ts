@@ -1,13 +1,11 @@
 import type { Config } from 'tailwindcss';
 
 const config: Config = {
-  enabled: process.env.NODE_ENV === "production",
   content: [
     './pages/**/*.{js,ts,jsx,tsx,mdx}',
     './components/**/*.{js,ts,jsx,tsx,mdx}',
     './app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
-  purge: ["./pages/**/*.{js,ts,jsx,tsx}", "./Components/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
       colors: {
@@ -23,6 +21,5 @@ const config: Config = {
     },
   },
   plugins: [require('@tailwindcss/line-clamp')],
-  important: true
 };
 export default config;
