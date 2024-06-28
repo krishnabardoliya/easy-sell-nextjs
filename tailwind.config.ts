@@ -1,6 +1,5 @@
-import type { Config } from "tailwindcss";
-
-const config: Config = {
+/** @type {import('tailwindcss').Config} */
+module.exports = {
   content: [
       "./app/pages/**/*.{ts,tsx}",
       "./app/products/**/*.{ts,tsx}",
@@ -8,14 +7,6 @@ const config: Config = {
       "./src/**/*.{ts,tsx}",
       "./data/**/*.{ts,tsx}",
     ],
-    purge: {
-      content: ["./app/pages/**/*.{ts,tsx}",
-      "./app/components/**/*.{ts,tsx}",
-      "./app/products/**/*.{ts,tsx}",
-      "./src/**/*.{ts,tsx}",
-      "./data/**/*.{ts,tsx}"],
-    }
-  ,
   theme: {
     extend: {
       colors: {
@@ -32,4 +23,3 @@ const config: Config = {
   },
   plugins: [],
 };
-export default config;
