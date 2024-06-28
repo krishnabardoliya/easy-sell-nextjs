@@ -9,15 +9,11 @@ const nextConfig = {
       },
       {
         protocol: 'https',
-        hostname: 'dbmgdlfeqxtzhnuazibe.supabase.co',
+        hostname: 'jlzvktrtmclopylirnmh.supabase.co',
       },
       {
         protocol: 'https',
         hostname: 'images.unsplash.com',
-      },
-      {
-        protocol: 'https',
-        hostname: 'loremflickr.com',
       },
     ],
   },
