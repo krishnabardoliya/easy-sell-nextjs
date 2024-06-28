@@ -8,6 +8,13 @@ const config: Config = {
       "./src/**/*.{ts,tsx}",
       "./data/**/*.{ts,tsx}",
     ],
+    purge: [
+      "./pages/**/*.{ts,tsx}",
+      "./components/**/*.{ts,tsx}",
+      "./app/**/*.{ts,tsx}",
+      "./src/**/*.{ts,tsx}",
+      "./data/**/*.{ts,tsx}",
+  ],
   theme: {
     extend: {
       colors: {
