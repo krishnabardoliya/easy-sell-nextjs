@@ -1,9 +1,12 @@
 /** @type {import('postcss-load-config').Config} */
-const config = {
-  plugins: [
-    'tailwindcss',
-    'autoprefixer',
-  ],
-};
+const tailwind = require('tailwindcss');
+const autoprefixer = require('autoprefixer');
 
-export default config;
+module.exports = {
+	plugins: [
+		// Some plugins, like postcss-nested, need to run before Tailwind
+		tailwind(),
+		// But others, like autoprefixer, need to run after
+		autoprefixer()
+	]
+};
