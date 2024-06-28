@@ -9,9 +9,10 @@ const config: Config = {
       "./src/**/*.{ts,tsx}",
       "./data/**/*.{ts,tsx}",
     ],
-    purge: [
-      "./src/pages/**/*.tsx", "./src/components/**/*.tsx",
-  ],
+    purge: {
+      content: ["./pages/**/*.tsx", "./components/**/*.tsx"],
+    }
+  ,
   theme: {
     extend: {
       colors: {
