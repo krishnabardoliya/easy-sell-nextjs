@@ -14,7 +14,7 @@ export const metadata: Metadata = {
   title: "Easy Sell",
   description: "Sell your product easily",
   openGraph: {
-    images: ['http://localhost:3000/assets/og-image.png'],
+    images: ['https://easy-sell-app.vercel.app/assets/og-image.png'],
   },
   alternates: {
     canonical: '/',
