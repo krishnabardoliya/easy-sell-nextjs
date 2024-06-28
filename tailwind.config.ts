@@ -10,11 +10,7 @@ const config: Config = {
       "./data/**/*.{ts,tsx}",
     ],
     purge: [
-      "./pages/**/*.{ts,tsx}",
-      "./components/**/*.{ts,tsx}",
-      "./app/**/**/*.{ts,tsx}",
-      "./src/**/*.{ts,tsx}",
-      "./data/**/*.{ts,tsx}",
+      "./src/pages/**/*.tsx", "./src/components/**/*.tsx",
   ],
   theme: {
     extend: {
