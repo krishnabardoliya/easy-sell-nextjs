@@ -3,6 +3,7 @@ import type { Config } from "tailwindcss";
 const config: Config = {
   content: [
       "./app/pages/**/*.{ts,tsx}",
+      "./app/products/**/*.{ts,tsx}",
       "./app/components/**/*.{ts,tsx}",
       "./src/**/*.{ts,tsx}",
       "./data/**/*.{ts,tsx}",
@@ -10,6 +11,7 @@ const config: Config = {
     purge: {
       content: ["./app/pages/**/*.{ts,tsx}",
       "./app/components/**/*.{ts,tsx}",
+      "./app/products/**/*.{ts,tsx}",
       "./src/**/*.{ts,tsx}",
       "./data/**/*.{ts,tsx}"],
     }
