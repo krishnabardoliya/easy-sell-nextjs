@@ -23,7 +23,7 @@ const config: Config = {
   plugins: [],
   purge: [
     "./src/components/**/*.{js,jsx}",
-    "./public/index.html",
+    "/index.html",
   ],
 };
 export default config;
